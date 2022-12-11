@@ -1,9 +1,8 @@
 main {
     div.clock {
             position: relative;
-            height: 200px;
-            width: 550px;
-            padding: 1em;
+            max-width: 550px;
+            padding: 1em 2em;
             background: transparent;
             border-radius: 3px;
             box-shadow: 2px 4px 10px rgba(0, 0 , 0, .5);

@@ -14,18 +14,30 @@
 <body>
 
     <main class="d-flex align-items-center justify-content-center">
-        <div class="container clock d-flex align-items-center justify-content-around">
-            <div class="container-time">
-                <span id="hours">00</span>
-                <span class="time">Horas</span>
+        <div class="container clock d-grid">
+            <div class="row mb-4">
+                <div class="container-time container-data col flex-row">
+                    <span id="day">DD/</span>
+                    <span id="month">MM/</span>
+                    <span id="year">YYYY</span>
+                </div>
             </div>
-            <div class="container-time">
-                <span id="minutes">00</span>
-                <span class="time">Minutos</span>
-            </div>
-            <div class="container-time">
-                <span id="seconds">00</span>
-                <span class="time">Segundos</span>
+
+            <div class="row justify-content-around">
+                <div class="container-time col-4">
+                    <span id="hours">00</span>
+                    <span class="time">Horas</span>
+                </div>
+
+                <div class="container-time col-4">
+                    <span id="minutes">00</span>
+                    <span class="time">Minutos</span>
+                </div>
+
+                <div class="container-time col-4">
+                    <span id="seconds">00</span>
+                    <span class="time">Segundos</span>
+                </div>
             </div>
         </div>
     </main>
