@@ -12,7 +12,7 @@ const clock = setInterval(function time() {
     if (min < 10) min = '0' + min;
     if (sec < 10) sec = '0' + sec;
 
-    hours.textContent = hrs
-    minutes.textContent = min
-    seconds.textContent = sec
+    hours.innerText = hrs
+    minutes.innerText = min
+    seconds.innerText = sec
 })
