@@ -13,9 +13,25 @@ html,body,main {
     width: 100vw;
     overflow-x: hidden;
 
-    background: rgb(2,0,36);
-    background: -moz-linear-gradient(120deg, rgba(2,0,36,1) 0%, rgba(54,9,121,1) 50%, rgba(60,9,121,1) 100%);
-    background: -webkit-linear-gradient(120deg, rgba(2,0,36,1) 0%, rgba(54,9,121,1) 50%, rgba(60,9,121,1) 100%);
     background: linear-gradient(120deg, rgba(2,0,36,1) 0%, rgba(54,9,121,1) 50%, rgba(60,9,121,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#3c0979",GradientType=1);
+    background: -moz-linear-gradient(120deg, rgba(2,0,36,1) 0%, rgba(54,9,121,1) 50%, rgba(60,9,121,1) 100%);
+    background: -webkit-linear-gradient(120deg, rgba(2,0,36,1) 0%, rgba(54,9,121,1) 50%, rgba(60,9,121,1) 100%);
+    background-size: 300% 300%;
+
+    animation: colors 15s ease infinite;
+    -moz-animation: colors 15s ease infinite;
+    -webkit-animation: colors 15s ease infinite;
+}
+
+@keyframes colors {
+    0% {
+        background-position: 0% 50%; 
+    }
+    50% {
+        background-position: 100% 50%; 
+    }
+    100% {
+        background-position: 0% 50%; 
+    }
 }
