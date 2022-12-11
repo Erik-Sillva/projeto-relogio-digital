@@ -1,0 +1,34 @@
+main {
+    div.clock {
+            height: 200px;
+            width: 550px;
+            padding: 1em;
+            background: transparent;
+            border-radius: 3px;
+            box-shadow: 2px 4px 10px rgba(0, 0 , 0, .5);
+
+            div.container-time {
+                height: 170px;
+                width: 30%;
+                color: #fff;
+                border-radius: 7px;
+                background: #050505cc;
+                box-shadow: 5px 5px 5px rgba(0, 0 , 0, .7);
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+
+                span {
+                    font-size: 1.7em;
+                    letter-spacing: 3px;
+                    font-weight: bolder;
+                }
+
+                span.time {
+                    font-size: 1em;
+                }
+            }
+    }
+}
