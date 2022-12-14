@@ -13,31 +13,94 @@
 </head>
 <body>
     <main class="d-flex align-items-center justify-content-center">
-        <div class="container clock d-grid">
-            <div class="row mb-4">
-                <div class="container-time container-data col flex-row">
-                    <span id="day">DD/</span>
-                    <span id="month">MM/</span>
-                    <span id="year">YYYY</span>
+        <div class="carousel slide" id="carousel-container">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container clock d-grid">
+                        <div class="row mb-4">
+                            <div class="container-time container-data col flex-row">
+                                <span id="day">DD/</span>
+                                <span id="month">MM/</span>
+                                <span id="year">YYYY</span>
+                            </div>
+                        </div>
+                        
+                        <div class="row justify-content-around" id="row-time">
+                            <div class="container-time col-4">
+                                <span id="hours" class="spn">00</span>
+                                <span class="time spn">Horas</span>
+                            </div>
+
+                            <div class="container-time col-4">
+                                <span id="minutes" class="spn">00</span>
+                                <span class="time spn">Minutos</span>
+                            </div>
+
+                            <div class="container-time col-4">
+                                <span id="seconds" class="spn">00</span>
+                                <span class="time spn">Segundos</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="container timer d-grid">
+                        <div class="row justify-content-around" id="row-time">
+                            <div class="container-time col-3">
+                                <span id="hours-c" class="spn">00</span>
+                                <span class="time spn">Horas</span>
+                            </div>
+
+                            <div class="container-time col-3">
+                                <span id="minutes-c" class="spn">00</span>
+                                <span class="time">Minutos</span>
+                            </div>
+
+                            <div class="container-time col-3">
+                                <span id="seconds-c" class="spn">00</span>
+                                <span class="time spn">Segundos</span>
+                            </div>
+
+                            <div class="container-time col-3">
+                                <span id="milisegundos-c" class="spn">00</span>
+                                <span class="time spn">Milissegundos</span>
+                            </div>
+                        </div>
+
+                        <div class="row mt-4">
+                            <div class="container-time col flex-row">
+                                <span onclick="start()">
+                                    <i class="fa-solid fa-play"></i>
+                                </span>
+
+                                <span onclick="pause()">
+                                    <i class="fa-solid fa-pause"></i>
+                                </span>
+
+                                <span onclick="reset()">
+                                    <i class="fa-solid fa-stop"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="row justify-content-around" id="row-time">
-                <div class="container-time col-4">
-                    <span id="hours">00</span>
-                    <span class="time">Horas</span>
-                </div>
-                <div class="container-time col-4">
-                    <span id="minutes">00</span>
-                    <span class="time">Minutos</span>
-                </div>
-                <div class="container-time col-4">
-                    <span id="seconds">00</span>
-                    <span class="time">Segundos</span>
-                </div>
-            </div>
+            
+            <button type="button" class="carousel-control-prev" data-bs-target="#carousel-container" data-bs-slide="prev">
+                <i class="fa-solid fa-angle-left" aria-hidden="true"></i>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+
+            <button type="button" class="carousel-control-next" data-bs-target="#carousel-container" data-bs-slide="next">
+                <i class="fa-solid fa-angle-right" aria-hidden="true"></i>
+                <span class="visually-hidden">Próximo</span>
+            </button>
         </div>
     </main>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/06dbd9c6a8.js" crossorigin="anonymous"></script>
     <script src="./assets/js/script.js"></script>
 </body>
 </html>

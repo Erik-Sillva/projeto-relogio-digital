@@ -1,41 +1,76 @@
 main {
-    div.clock {
-            position: relative;
-            max-width: 550px;
-            padding: 1em 2em;
-            background: transparent;
-            border-radius: 3px;
-            box-shadow: 2px 4px 10px rgba(0, 0 , 0, .5);
+    div.carousel {
+        width: 55em;
+        div.carousel-inner {
+            overflow: visible;
+            div.carousel-item {
+                div.clock, div.timer {
+                    position: relative;
+                    max-width: 600px;
+                    padding: 2em;
+                    background: transparent;
+                    border-radius: 3px;
+                    box-shadow: 2px 4px 10px rgba(0, 0 , 0, .5);
+        
+                    div.container-time {
+                        height: 170px;
+                        width: 30%;
+                        color: #fff;
+                        border-radius: 7px;
+                        background: #050505cc;
+                        box-shadow: 5px 5px 5px rgba(0, 0 , 0, .7);
+        
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+        
+                        span {
+                            font-size: 1.7em;
+                            letter-spacing: 3px;
+                            font-weight: bolder;
+                        }
+        
+                        span.time {
+                            font-size: 1em;
+                        }
 
-            div.container-time {
-                height: 170px;
-                width: 30%;
-                color: #fff;
-                border-radius: 7px;
-                background: #050505cc;
-                box-shadow: 5px 5px 5px rgba(0, 0 , 0, .7);
-
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-direction: column;
-
-                span {
-                    font-size: 1.7em;
-                    letter-spacing: 3px;
-                    font-weight: bolder;
+                        span.spn {
+                            margin: 0 auto;
+                        }
+                    }
                 }
 
-                span.time {
-                    font-size: 1em;
+                div.timer {
+                    div.container-time {
+                        width: 23%;
+                        span {
+                            margin: 0 15px;
+                            font-size: 1.5em;
+                            i {
+                                cursor: pointer;
+                            }
+                        }
+
+                        span.time {
+                            font-size: .7em;
+                        }
+                    }
                 }
             }
+        }
+
+        button {
+            i {
+                font-size: 2em;
+            }
+        }
     }
 }
 
 @media (max-width: 570px) {
     main {
-        div.clock {
+        div.clock,div.timer {
             width: 90%;
             div#row-time {
                 flex-direction: column;

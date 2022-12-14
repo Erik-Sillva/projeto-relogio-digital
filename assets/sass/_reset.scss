@@ -8,6 +8,18 @@
     font-family: 'Open Sans', sans-serif;   
 }
 
+@keyframes colors {
+    0% {
+        background-position: 0% 50%; 
+    }
+    50% {
+        background-position: 100% 50%; 
+    }
+    100% {
+        background-position: 0% 50%; 
+    }
+}
+
 html,body,main {
     height: 100vh;
     width: 100vw;
@@ -22,16 +34,4 @@ html,body,main {
     animation: colors 15s ease infinite;
     -moz-animation: colors 15s ease infinite;
     -webkit-animation: colors 15s ease infinite;
-}
-
-@keyframes colors {
-    0% {
-        background-position: 0% 50%; 
-    }
-    50% {
-        background-position: 100% 50%; 
-    }
-    100% {
-        background-position: 0% 50%; 
-    }
 }
