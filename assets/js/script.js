@@ -37,7 +37,6 @@ let minc = 0
 let secc = 0
 let mlsc = 0
 let interval
-
 function start() {
     interval = setInterval(function () {
         mlsc++
@@ -64,9 +63,8 @@ function start() {
         secctxt.innerText = secc
         minctxt.innerText = minc
         hrsctxt.innerText = hrsc
-    })
+    },10)
 }
-
 function pause() {
     clearInterval(interval)
 }
