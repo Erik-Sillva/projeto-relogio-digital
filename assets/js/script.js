@@ -6,6 +6,7 @@ const clock = setInterval(function time() {
     const hours = document.getElementById('hours');
     const minutes = document.getElementById('minutes');
     const seconds = document.getElementById('seconds');
+    const dayweek = document.getElementById('day-week');
 
     let dateToday = new Date();
     let day = dateToday.getDate();
@@ -14,9 +15,26 @@ const clock = setInterval(function time() {
     let hrs = dateToday.getHours();
     let min = dateToday.getMinutes();
     let sec = dateToday.getSeconds();
+    let wee = dateToday.getDay();
     if (hrs < 10) hrs = '0' + hrs;
     if (min < 10) min = '0' + min;
     if (sec < 10) sec = '0' + sec;
+
+    if (wee == 0) {
+        wee = 'Domingo'
+    } else if (wee == 1) {
+        wee = 'Segunda-Feira'
+    } else if (wee == 2) {
+        wee = 'Terça-Feira'
+    } else if (wee == 3) {
+        wee = 'Quarta-Feira'
+    } else if (wee == 4) {
+        wee = 'Quinta-Feira'
+    } else if (wee == 5) {
+        wee = 'Sexta-Feira'
+    } else {
+        wee = 'Sábado'
+    }
 
     days.innerText = day + '/'
     month.innerText = mon + '/'
@@ -24,6 +42,8 @@ const clock = setInterval(function time() {
     hours.innerText = hrs
     minutes.innerText = min
     seconds.innerText = sec
+    dayweek.innerText = wee
+
 })
 
 // ----------------CRONÔMETRO----------------//
